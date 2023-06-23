@@ -11,7 +11,7 @@ ties = 0
 
 def main():
     while True:
-    choice =  get_input()
+        choice =  get_input()
 
 
     
@@ -29,7 +29,7 @@ def get_input():
             print('Please print valid option [Rock/Paper/Scissors/Spock/Lizard] or [Quit]: ')
 
 
-def winner_loser(human_choice, comp_choice)
+def winner_loser(human_choice, comp_choice):
     if ((human_choice == 'Rock' and comp_choice in ['Paper', 'Spock']) or
         (human_choice == 'Paper' and comp_choice in ['Scisors', 'Lizard']) or
         (human_choice == 'Scisors' and comp_choice in ['Rock', 'Spock']) or
