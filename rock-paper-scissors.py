@@ -12,11 +12,13 @@ ties = 0
 def main():
     while True:
         choice =  get_input()
-
-
+        comp_selection = comp_rand_gen()
+        print(winner_loser(choice, comp_selection))
     
     
-
+    
+def comp_rand_gen():
+    return random.choice(options)
 
 def get_input():
     while True:
@@ -35,10 +37,13 @@ def winner_loser(human_choice, comp_choice):
         (human_choice == 'Scisors' and comp_choice in ['Rock', 'Spock']) or
         (human_choice == 'Spock' and comp_choice in ['Lizard', 'Scisors']) or
         (human_choice == 'Lizard' and comp_choice in ['Scisors', 'Rock'])):
+        comp_choice += 1
         return 'You Lose'
     elif human_choice == comp_choice:
+        ties += 1
         return "Tie"
     else:
+        human_choice += 1
         return 'You Win'
 
 def close_game():
