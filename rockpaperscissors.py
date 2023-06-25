@@ -28,8 +28,7 @@ def main():
         print(winner_loser(choice, comp_selection))
         print(f'Human Score: {human_score} | Computer Score: {comp_score} | Ties: {ties}\n')
     
-    
-    
+
 def comp_rand_gen():
     return random.choice(list(options.keys()))
 
@@ -67,6 +66,5 @@ def close_game():
     print('Thank you for playing!')
     time.sleep(5)
     quit()
-
 
 main()
